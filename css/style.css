@@ -1,6 +1,7 @@
 @import "reset.css";
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -9,26 +10,40 @@ body {
 }
 
 #main {
+  background-image: -webkit-gradient(linear,
+      left top, left bottom,
+      from(rgba(252, 58, 58, 0.315)),
+      to(rgba(255, 70, 70, 0.459))),
+    url("../img/background.png");
+  background-image: -o-linear-gradient(rgba(252, 58, 58, 0.315),
+      rgba(255, 70, 70, 0.459)),
+    url("../img/background.png");
   background-image: linear-gradient(rgba(252, 58, 58, 0.315),
       rgba(255, 70, 70, 0.459)),
     url("../img/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
 }
 
 .container {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 2.5rem 1.25rem;
+  padding: 3rem 1.25rem;
   position: relative;
   overflow: hidden;
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-line-pack: center;
   align-content: center;
   margin-bottom: 40px;
 }
@@ -63,18 +78,19 @@ body {
 
 .main-nav ul li a:hover {
   border-bottom: 4px solid white;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
 .cta-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: inline-block;
+  position: relative;
 }
 
 .cta-description {
   width: 60%;
-  padding-right: 150px;
+  padding-right: 90px;
 }
 
 .cta-description>h2 {
@@ -82,7 +98,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .cta-description>p {
@@ -90,7 +106,7 @@ body {
   color: white;
   font-family: "Heebo", sans-serif;
   font-weight: 100;
-  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .cta-button {
@@ -102,6 +118,7 @@ body {
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  margin-bottom: 2.5rem;
 }
 
 .cta-button>img {
@@ -112,21 +129,39 @@ body {
 
 .cta-button:hover {
   color: #c4c4c4;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .cta-iphone {
-  display: block;
-  width: 40%;
-  position: relative;
-}
-
-.iphone {
-  width: 85%;
   position: absolute;
   top: 0;
+  right: -90px;
+  overflow: hidden;
+}
+
+.iphone-off {
+  width: 85%;
+  position: relative;
+  top: 1px;
   right: -50px;
-  margin-bottom: -240px;
+  /* margin-bottom: -180px; */
+  z-index: 111;
+}
+
+.iphone-btn {
+  position: absolute;
+  /* top: 0; */
+  right: 30%;
+}
+
+.iphone-on {
+  width: 55%;
+  position: absolute;
+  top: 13.5%;
+  right: 22.3%;
+  z-index: 222;
 }
 
 /* * App Features */
@@ -150,21 +185,32 @@ body {
 }
 
 .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .feature-box {
   width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 0 3.5rem;
 }
-
-.feature-box img {}
 
 .feature-box>h3 {
   text-align: center;
@@ -182,6 +228,14 @@ body {
 }
 
 #second-background {
+  background-image: -webkit-gradient(linear,
+      left top, left bottom,
+      from(rgba(88, 88, 88, 0.7)),
+      to(rgba(88, 88, 88, 0.7))),
+    url("../img/second-bg.jpg");
+  background-image: -o-linear-gradient(rgba(88, 88, 88, 0.7),
+      rgba(88, 88, 88, 0.7)),
+    url("../img/second-bg.jpg");
   background-image: linear-gradient(rgba(88, 88, 88, 0.7),
       rgba(88, 88, 88, 0.7)),
     url("../img/second-bg.jpg");
@@ -191,12 +245,11 @@ body {
 
 #second-background .container {
   padding: 0;
-  margin: 0;
 }
 
 .highlight-text {
   width: 55%;
-  margin-left: 18rem;
+  margin-left: 10rem;
   padding: 10rem 0;
 }
 
@@ -233,6 +286,8 @@ body {
 
 .download:hover {
   color: #c4c4c4;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -246,8 +301,13 @@ footer .container {
 }
 
 .footer-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
@@ -282,7 +342,7 @@ footer .container {
 .ul-tweets li {
   font-size: 15px;
   line-height: 1.5rem;
-  margin: 2rem;
+  margin-top: 2rem;
 }
 
 footer p {
@@ -302,8 +362,14 @@ footer p {
 }
 
 #copyright .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 1.5rem;
 }
@@ -321,4 +387,25 @@ footer p {
 
 .social img {
   margin: 0 10px;
+}
+
+/* !=============== Animation ===============*/
+
+.js-wp-2 {
+  opacity: 0;
+}
+
+/* * class added via JavaScript */
+.js-wp-2.animated {
+  opacity: 1;
+}
+
+.js-wp-3 {
+  opacity: 0;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.js-wp-3.animated {
+  opacity: 1;
 }
