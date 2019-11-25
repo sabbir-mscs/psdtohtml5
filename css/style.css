@@ -14,13 +14,13 @@ body {
       left top, left bottom,
       from(rgba(252, 58, 58, 0.315)),
       to(rgba(255, 70, 70, 0.459))),
-    url("../img/background.png");
+    url("../img/background.jpg");
   background-image: -o-linear-gradient(rgba(252, 58, 58, 0.315),
       rgba(255, 70, 70, 0.459)),
-    url("../img/background.png");
+    url("../img/background.jpg");
   background-image: linear-gradient(rgba(252, 58, 58, 0.315),
       rgba(255, 70, 70, 0.459)),
-    url("../img/background.png");
+    url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -232,13 +232,13 @@ body {
       left top, left bottom,
       from(rgba(88, 88, 88, 0.7)),
       to(rgba(88, 88, 88, 0.7))),
-    url("../img/second-bg.png");
+    url("../img/second-bg.jpg");
   background-image: -o-linear-gradient(rgba(88, 88, 88, 0.7),
       rgba(88, 88, 88, 0.7)),
-    url("../img/second-bg.png");
+    url("../img/second-bg.jpg");
   background-image: linear-gradient(rgba(88, 88, 88, 0.7),
       rgba(88, 88, 88, 0.7)),
-    url("../img/second-bg.png");
+    url("../img/second-bg.jpg");
   background-size: cover;
   background-position: center;
 }
