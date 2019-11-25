@@ -232,13 +232,13 @@ body {
       left top, left bottom,
       from(rgba(88, 88, 88, 0.7)),
       to(rgba(88, 88, 88, 0.7))),
-    url("../img/second-bg.jpg");
+    url("../img/second-bg.png");
   background-image: -o-linear-gradient(rgba(88, 88, 88, 0.7),
       rgba(88, 88, 88, 0.7)),
-    url("../img/second-bg.jpg");
+    url("../img/second-bg.png");
   background-image: linear-gradient(rgba(88, 88, 88, 0.7),
       rgba(88, 88, 88, 0.7)),
-    url("../img/second-bg.jpg");
+    url("../img/second-bg.png");
   background-size: cover;
   background-position: center;
 }
