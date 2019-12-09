@@ -99,6 +99,7 @@ body {
   text-transform: uppercase;
   color: white;
   padding-bottom: 2.5rem;
+  line-height: 4rem;
 }
 
 .cta-description>p {
@@ -259,6 +260,7 @@ body {
   text-transform: uppercase;
   padding-bottom: 2rem;
   color: white;
+  line-height: 4rem;
 }
 
 .red-span {
